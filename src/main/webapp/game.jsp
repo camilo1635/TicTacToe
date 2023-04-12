@@ -3,7 +3,9 @@
 &lt;%@page import=&quot;game.GameBean.GameState&quot; %&gt;
 &lt;%@page import=&quot;game.Cell&quot; %&gt;
 &lt;%@page import=&quot;game.Line&quot; %&gt;
+
 &lt;jsp:useBean id=&quot;gameBean&quot; scope=&quot;session&quot; class=&quot;game.GameBean&quot; /&gt;
+
 &lt;%@page contentType=&quot;text/html&quot; pageEncoding=&quot;UTF-8&quot;%&gt;
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -13,7 +15,7 @@
 &lt;/head&gt;
 &lt;body&gt;
 &lt;h1&gt;Tic Tac Toe&lt;/h1&gt;
-&lt;table border=&quot;1&quot;&gt;
+&lt;table border=&quot;4&quot;&gt;
 &lt;c:forEach var=&quot;line&quot; items=&quot;${gameBean.gridLines}&quot;&gt;
 &lt;tr&gt;
 &lt;c:forEach var=&quot;cell&quot; items=&quot;${gameBean.getGridStatus(line)}&quot;&gt;
